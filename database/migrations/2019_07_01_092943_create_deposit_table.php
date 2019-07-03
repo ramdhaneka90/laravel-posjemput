@@ -28,7 +28,7 @@ class CreateDepositTable extends Migration
                 ->on('customers')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-        })
+        });
     }
 
     /**

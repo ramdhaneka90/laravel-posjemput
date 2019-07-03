@@ -33,6 +33,7 @@ class CreateOrderTable extends Migration
             $table->string('nama');
             $table->string('alamat');
             $table->string('phone');
+            $table->date('waktu_jemput');
             $table->unsignedBigInteger('customer_address_id');
             $table->timestamps();
         });

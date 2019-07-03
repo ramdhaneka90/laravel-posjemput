@@ -61,8 +61,13 @@
                                         </div>
 
                                         <div class="col-lg-4">
-                                            <label>Alamat Pick Up</label>
-                                            <input type="text" class="form-control" name="alamatPck" placeholder="Alamat Pick Up"><br>
+                                            <input type="radio" name="almPck" value="1" checked=""> 
+                                            <select class="form-control" id="alamatLamaPck" name="alamatPck">
+                                                <option selected="" value="">Pilih alamat pickup</option>
+                                                @foreach($add2s as $value2)
+                                                    <option>{{ $value2 }}</option>
+                                                @endforeach
+                                            </select><br>
                                         </div>
                                     </div>
 

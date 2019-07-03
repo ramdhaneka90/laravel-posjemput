@@ -48,6 +48,7 @@
 	                <?php endif; ?>
                     <?php if($order->status == "PENDING"): ?>
                       <td>Approved
+                        
                         <button class="btn btn-default" id="id_order" data-toggle="modal" data-target="#modal-default" value="<?php echo e($order->id); ?>">Jemput</button>
                       </td>
                     <?php elseif($order->status == "off"): ?> 

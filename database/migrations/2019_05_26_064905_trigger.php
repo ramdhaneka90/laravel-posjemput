@@ -22,6 +22,11 @@ class Trigger extends Migration
             BEGIN
                 INSERT INTO log_activities SET order_id = OLD.id, message = 'Order anda telah disetujui!', category = 'UPDATE';
             END");
+
+        DB::unprepared("CREATE TRIGGER set_courier AFTER UPDATE ON orders FOR EACH ROW 
+            BEGIN
+                INSERT INTO log_activities SET order_id = OLD.id, message = CONCAT('Orderan anda akan dipick up tgl',NEW.waktu_jemput), category = 'PICKUP';
+            END");
     }
 
     /**

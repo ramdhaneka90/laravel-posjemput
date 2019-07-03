@@ -18,6 +18,12 @@ class CreateSettingTable extends Migration
             $table->bigInteger('limit_saldo');
             $table->timestamps();
         });
+
+        DB::table('setting')->insert(
+        array(
+            'limit_saldo' => 500000
+        )
+    );
     }
 
     /**
