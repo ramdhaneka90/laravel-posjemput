@@ -44,4 +44,11 @@ return [
         ],
     ],
 
+    'rajaongkir' => [
+    'base_uri' => env('RAJAONGKIR_BASE_URI', 'https://api.rajaongkir.com'),
+    'type' => env('RAJAONGKIR_type', 'starter'),
+    'key' => env('RAJAONGKIR_API_KEY', 'c0d0fbb49debcc8b46adf327e66f43ba'),
+    'origin' => env('RAJAONGKIR_ORIGIN'), // if you have fixed origin city id,
+    ],
+
 ];

@@ -31,11 +31,6 @@ class OrdersController extends Controller
         
         return view('admin/order/aproval', compact('orders','dataCour'));
     }
-
-    public function indexCostumer()
-    {
-        return view('/customer-views/index');
-    }
    
 
     public function show_order()
@@ -107,9 +102,18 @@ class OrdersController extends Controller
     }
 
     public function order_store(Request $request) {
-        
+
         $total = collect([]);
+        $address = Auth::user()->customerAddress();
+
+        dd('failed');
         foreach ($request->barang as $key => $value) {
+            $addressLawas = $address->where('address','like',"%".$request->alamatPck[$key]."%")->limit(10)->get();
+            //dd($addressLawas);
+            if ($addressLawas->isEmpty()) {
+                $addressCustomer = new CustomerAddress;
+                dd('gimana');
+            }
             $order = new Order;
             $order->customer_id = Auth::user()->id;
             $order->name_order = $request->barang[$key];

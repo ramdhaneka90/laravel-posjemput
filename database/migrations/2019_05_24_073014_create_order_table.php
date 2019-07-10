@@ -30,11 +30,11 @@ class CreateOrderTable extends Migration
             $table->string('name_receiver');
             $table->string('address_receiver');
             $table->bigInteger('total_bayar');
-            $table->string('nama');
-            $table->string('alamat');
-            $table->string('phone');
-            $table->date('waktu_jemput');
-            $table->unsignedBigInteger('customer_address_id');
+            $table->string('nama')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('phone')->nullable();
+            $table->date('waktu_jemput')->nullable();
+            $table->unsignedBigInteger('customer_address_id')->nullable();
             $table->timestamps();
         });
 

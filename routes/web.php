@@ -4,10 +4,6 @@ Route::get('/order-approve',function(){
     return view('/admin/order/aproval');
 });
 
-Route::get('/costumer-order', function () {
-    return view('/customer-views/order-pickup');
-});
-
 Route::get('/costumer-history', function () {
     return view('/customer-views/order-history');
 });
@@ -93,10 +89,11 @@ Route::post('/register/{user}', 'Auth\RegisterController@createAdmin_Operator');
 Route::group(['middleware' => 'checkCustomer'], function () {
 
 
-    Route::get('/home', 'OrdersController@indexCostumer');
+    Route::get('/home', 'CustomerController@indexCostumer');
     //Route::get('/home', 'OrdersController@show_order');
     Route::post('order/store', 'OrdersController@order_store')->name('order');
-    Route::get('order-history', 'OrdersController@order_history');
+    Route::get('/costumer-order','CustomerController@CustomerOrder');
+    Route::get('/order-history', 'OrdersController@order_history');
     Route::get('/costumer-topup','TopUpController@topUpindex')->name('topUpCustomer');
     Route::post('/topup','TopUpController@topup');
 });
@@ -108,6 +105,8 @@ Route::group(['middleware' => 'checkOperator'], function () {
     Route::put('set_courier/{id}','CourierController@setCourier')->name('set_courier');
 
 });
+
+Route::get('getCity/{id}','CustomerController@getCity');
 
 
 Auth::routes();

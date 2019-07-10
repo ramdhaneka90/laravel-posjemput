@@ -118,5 +118,6 @@
   
   <script src="/js/main.js"></script>
   <script src="/js/Jsscript.js"></script>
+  @stack('script')
 </body>
 </html>

@@ -51,6 +51,7 @@
 				<input class="form-control" type="text" name="kategori" placeholder="Kategori Barang"><br>
 				<label>Berat Barang</label>
 				<input class="form-control" type="number" min="1" name="berat" placeholder="Berat Barang"><br>
+
 				<label>Alamat Penerima</label><br>
 				<input type="radio" name="alm" value="1" checked="">	
 				<select class="form-control" id="alamatLama" name="alamat">
@@ -63,6 +64,7 @@
 				</select><br>
 				<input type="radio" name="alm" value="2">
 				<textarea class="form-control" id="alamatBaru" name="alamat" placeholder="Tambah alamat penerima baru"></textarea><br>
+				
 				<label>Alamat Pickup</label><br>
 				<input type="radio" name="almPck" value="1" checked="">	
 				<select class="form-control" id="alamatLamaPck" name="alamatPck">
@@ -73,9 +75,10 @@
 				</select><br>
 				<input type="radio" name="almPck" value="2">
 				<textarea class="form-control" id="alamatBaruPck" name="alamatPck" placeholder="Tambah alamat pickup baru"></textarea><br>
-				<button id="rst" class="form-control" type="reset">Reset</button>
+				<button id="rst" class="form-control" type="reset">Resffdsdsfdsfdsfsfdsfsfdsfeat</button>
 			</form>
-			<button class="form-control" id="tambah_form"> + Tambah pengiriman</button>
+			<button class="form-control" id="tambah_form"> + Tambah pengairiman</button>
         </div>
+
 	</div>
 @endsection

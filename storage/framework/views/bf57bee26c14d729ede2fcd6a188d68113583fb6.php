@@ -118,6 +118,7 @@
   
   <script src="/js/main.js"></script>
   <script src="/js/Jsscript.js"></script>
+  <?php echo $__env->yieldPushContent('script'); ?>
 </body>
 </html>
 <?php /**PATH /var/www/html/posjemputBaru/resources/views/layouts/master-costumer.blade.php ENDPATH**/ ?>
